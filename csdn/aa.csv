@@ -1,0 +1,831 @@
+url,pdate,description,title
+http://blog.csdn.net/peihaozhu/article/list/2,2016-09-19 18:46,"
+矩阵的快速幂是用来高效地计算矩阵的高次方的。将朴素的o（n）的时间复杂度，降到log（n）.最简单的例子来讲，一般我们正常计算实数x的n次幂时，都是从1开始，进行n次的x相乘。但做下简单的改进就能减少连乘的次数，方法如下：把n个矩阵进行两两分组，比如：A*A*A*A*A*A  =>  (A*A)*(A*A)*(A*A)这样变的好处是，你只需要计算一次A*A，然后将结果(A*A)连乘自己两次就能得到A...        ","
+        矩阵快速幂            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-09-19 18:45,"
+RelativeLayout.LayoutParamsPer-child layout information associated with RelativeLayout.
+Constructor
+RelativeLayout.LayoutParams layoutParams = new LayoutParams(width, height);构造函数，设置相对布局的宽高。
+layoutPara...        ","
+        LayoutParams            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-09-19 18:44,"
+public final int getMeasuredHeight ()
+Added in API level 1 
+Like getMeasuredHeightAndState(), but only returns the raw width component (that is the result is masked by MEASURED_SIZE_MASK).Returns:The r...        ","
+        getMeasured            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-09-19 18:44,"
+FontMetricsFontMetrics是Paint的一个内部类，主要定义了Paint绘图时的一些关键坐标位置，具体如下图
+ascent:该距离是从所绘字符的baseline之上至该字符所绘制的最高点。这个距离是系统推荐。
+descent:该距离是从所绘字符的baseline之下至该字符所绘制的最低点。这个距离是系统推荐的。
+top:该距离是从所绘字符的baseline之上至可绘制区域的最高点。...        ","
+        Android-drawText            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-24 19:02,"
+问题如下：class FileStruct{       int intPara;       FileStruct(){            intPara=0;       }       public void setintPara(int i){            intPara=i;       }       public int getintPara(){...        ","
+        JAVA对象数组的初始化            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-11 11:07,"
+文章来源：c_cloud  KMP思想
+  KMP算法是一种改进的字符串匹配算法，由D.E.Knuth，J.H.Morris和V.R.Pratt同时发现，因此人们称它为克努特——莫里斯——普拉特操作（The Knuth-Morris-Pratt Algorithm，简称KMP算法）。KMP算法的关键是利用匹配失败后的信息，尽量减少模式串与主串的匹配次数以达到快速匹配的目的。具体实现就是实现一个nex...        ","
+        KMP笔记            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-11 11:06,"
+绘图单变量函数在 MATLAB 中绘图包含下面三个步骤： 
+1. 定义函数
+指定要绘制的函数图形的值范围
+调用 MATLAB 的 plot(x, y)函数
+ 
+当指定函数的值范围时，我们必须告诉 MATLAB 函数使用的变量的增量。使用较少的增量可以使得图形显示更加平滑。如果增量较小，MATLAB 会计算更多的函数值，不过通常不需要取得那么小。我们用一个简单的例子来看看如何做。我们绘制 0≤x≤10...        ","
+        Matlab学习(五)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-11 11:05,"
+矩阵矩阵是两维数字数组，要在 MATLAB 创建矩阵，输入的行各元素之间用空格或逗号分隔，行末使用分号标记。>> A = [-1,6; 7, 11]
+A =
+    -1 6
+    7 11
+>> B = [2,0,1;-1,7,4; 3,0,1]
+B =
+    2 0 1
+    -1 7 4
+    3 0 1转置>> A = [-1 2 0; 6 4 1]
+A =
+    -1 2 0...        ","
+        Matlab学习(四)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-11 11:05,"
+文件存储.mat在Matlab中，为了方便我们在之后的工作中随时进行中断的工作，我们可以在IDE中通过：
+点击“文件（File）”下接菜单
+选择“保存工作区为（Save Workspace As…）”
+输入文件名
+点击“保存（Save）”按钮
+将当前工作状态保存为.mat文件，之后我们就可以随时、随地在任何安装Matlab软件的计算机上使用当前工作状态。.m有时候，特别是复杂工程，我们可能无法坐在一...        ","
+        Matlab学习(三)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-09 22:45,"
+辅助指令help工具
+help 目录名      显示指定目录中的所有命令及其函数
+help lang     将列出与 MATLAB 编程语言的所有命令及其函数
+help matfun   将列出与数值线性代数有关的所有矩阵函数
+help elfun    列出所有基本函数 help 命令名/函数名/符号   显示指定的命令名/函数名/符号的详细信息
+例：显示计算矩阵特征值和特征向量的函数eig的...        ","
+        Matlab学习（二）            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-09 22:44,"
+# matlab小序 #  MALAB译于矩阵实验室MATrix LABoratory是用来提供通往LINPACK 和 EISPACK 矩阵软件包接口的，后来，它渐渐发展成了通用科技计算图视交互系统和程序语言。
+MATLAB 的基本数据单位是矩阵 它的指令表达与数学 工程中常用的习惯形式十分相似 比如 矩阵方程 Ax=b 在 MATLAB 中被写成 A*x=b 而若要通过 A,b 求 x 那么只要写...        ","
+        Matlab学习（一）            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-09 22:42,"
+需求最近突然有朋友对投票刷票有需求，正好自己空了下来，就帮他写了个简单的多线程投票脚本。因为不想考虑过多的session、cookie以及post data，所以直接使用了自动化工具Selenium简单地说，Selenium就是一个通过执行预先设置的Browser的指令，解放双手，提高工作效率。不同于通用的流行python网络模块，Selenium更像是市面上流行的按键精灵类似的软件，通过设定特定的...        ","
+        简单刷票            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-07-03 11:07,"
+引入在有向图G中，如果两个顶点间至少存在一条路径，称两个顶点强连通(strongly connected)。如果有向图G的每两个顶点都强连通，称G是一个强连通图。非强连通图有向图的极大强连通子图，称为强连通分量(strongly connected components)。下图中，子图{1,2,3,4}为一个强连通分量，因为顶点1,2,3,4两两可达。{5},{6}也分别是两个强连通分量。tarja...        ","
+        tarjan算法求强连通分量            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-06-30 21:00,"
+模板生成问题描述成成最近在搭建一个网站，其中一些页面的部分内容来自数据库中不同的数据记录，但是页面的基本结构是相同的。例如，对于展示用户信息的页面，当用户为 Tom 时，网页的源代码是而当用户为 Jerry 时，网页的源代码是这样的例子在包含动态内容的网站中还有很多。为了简化生成网页的工作，成成觉得他需要引入一套模板生成系统。 　模板是包含特殊标记的文本。成成用到的模板只包含一种特殊标记，格式为 {...        ","
+        2015.9CCF认证试题（2）            
+        "
+http://blog.csdn.net/peihaozhu/article/list/2,2016-06-30 21:00,"
+给定一个整数数列，数列中连续相同的最长整数序列算成一段，问数列中共有多少段？ 
+  输入格式 
+  输入的第一行包含一个整数n，表示数列中整数的个数。 
+  第二行包含n个整数a1, a2, …, an，表示给定的数列，相邻的整数之间用一个空格分隔。输出格式
+输出一个整数，表示给定的数列有多个段。 
+- 样例输入88 8 8 0 12 12 8 0 
+- 样例输出5
+样例说明
+8 8 8是第一段，0...        ","
+        2015.9CCF认证试题（1）            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:34,"
+数字共有七个，即I(1)，V(5)，X(10)，L(50)，C(100)，D(500)，M(1000)。按照下面的规则可以表示任意正整数。
+
+
+重复数次：一个罗马数字重复几次，就表示这个数的几倍。 右加左减：在一个较大的罗马数字的右边记上一个较小的罗马数字，表示大数字加小数字。在一个较大的数字的左边记上一个较小的罗马数字，表示大数字减小数字。但是，左减不能跨越等级。比如，99不可以用IC表示...        ","
+        罗马数字规则            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:32,"
+原文：  http://gitbook.liuhui998.com/3_3.htmlhttp://gitbook.liuhui998.com/5_3.html一、如何分支的合并在git中，可以使用git merge 和git rebase两个命令来进行分支的合并。git merge 和git rebase在大体上都差不多，下文主要以git merge来例来讲解分支的合并流程。如果你想了解分支合并的...        ","
+        分支与合并            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:30,"
+使用了Notification下的setLatestEventInfo()方法时，Eclipse却提示：“ 不建议使用类型 Notification 的方法 setLatestEventInfo（Context, CharSequence, CharSequence, PendingIntent）”！
+
+    这是为什么呢？查询后得知：setLatestEventInfo该方法已被depre...        ","
+        Notification方法更新            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:39,"
+NoC的拓扑结构必须保证每个节点可以发送数据包到其他节点。当没有完善的拓扑结构的时候，路由算法决定数据包从原地址开始选择那一条路径到目的地址。所以，有效的数据算法对NoC网路性能的好坏是至关重要的。路由算法可以按照不同的标准分为不同的几类。比如说源路由（SOurce Routing）和分布式路由（Distrubuted Routing），确定路由（Deterministic Routng）和自适应路...        ","
+        NoC路由算法            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:27,"
+什么是MIME类型-在把输出结果传送到浏览器上的时候，浏览器必须启动是党的应用程序来处理这个输出文档。这可以通过多种类型MIME（多功能网际邮件扩充协议）来完成。在HTTP中，MIME类型被定义在Content-Type header中。
+
+例如，架设你要传送一个Microsoft Excel文件到客户端。那么这时的MIME类型就是“application/vnd.ms-excel”。在大多数...        ","
+        Content Provider之MIME类型            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:26,"
+context不是函数而是一个类——如果不太了解面向对象，可以把“类”看做一种数据类型，就像int，不过类型为“类”的数据（称为对象）可能储存远比int多的信息，比如这里的类型为Context的对象就储存关于程序、窗口的一些资源。
+ 
+ 
+ 
+有些函数调用时需要一个Context参数，比如Toast.makeText，因为函数需要知道是在哪个界面中显示的Toast。
+ 
+再比如，But...        ","
+        Android之Context、this            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:25,"
+一、首先，让我们确认下什么是service？ 
+        service就是android系统中的服务，它有这么几个特点：它无法与用户直接进行交互、它必须由用户或者其他程序显式的启动、它的优先级比较高，它比处于前台的应用优先级低，但是比后台的其他应用优先级高，这就决定了当系统因为缺少内存而销毁某些没被利用的资源时，它被销毁的概率很小哦。 
+二、那么，什么时候，我们需要使用service呢...        ","
+        Android开发Service            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:24,"
+目前，发送短消息常用Text和PDU(Protocol Data Unit，协议数据单元)模式。使用Text模式收发短信代码简单，实现起来十分容易，但最大的缺点是不能收发中文短信；而PDU模式不仅支持中文短信，也能发送英文短信。PDU模式收发短信可以使用3种编码：7-bit、8-bit和UCS2编码。7-bit编码用于发送普通的ASCII字符，8-bit编码通常用于发送数据消息，UCS2编码用于发...        ","
+        短信--Text与PDU            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:23,"
+1. Action/Service/DAO简介：
+
+      Action是管理业务（Service）调度和管理跳转的。
+
+      Service是管理具体的功能的。
+
+      Action只负责管理，而Service负责实施。
+
+      DAO只完成增删改查，虽然可以1-n，n-n，1-1关联，模糊、动态、子查询都可以。但是无论多么复杂的查询，dao只是封装增删改查...        ","
+        Action/Service/DAO            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:22,"
+互联网在近10年的得到飞速发展，互联网正在逐渐深入人们的生活，改变人们的生活。互联网经济也经历了风风雨雨，从缓慢起步到急速膨胀，从泡沫破灭到逐步回暖；从“网络广告”到“拇指经济”，从“网络游戏”到“搜索力经济”。目前，搜索引擎成为最受人们关注的焦点之一，也成为亿万富翁的制造摇篮。越来越多的公司都希望在搜索引擎这座金矿中挖到筐金子，其中许多人会选择拥有自己的搜索引擎。国内著名搜索引擎公司百度（htt...        ","
+        搜索引擎综述            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:21,"
+我们依次看看这十一种传感器
+
+ 
+
+1 加速度传感器
+
+加速度传感器又叫G-sensor，返回x、y、z三轴的加速度数值。
+
+该数值包含地心引力的影响，单位是m/s^2。
+
+将手机平放在桌面上，x轴默认为0，y轴默认0，z轴默认9.81。
+
+将手机朝下放在桌面上，z轴为-9.81。
+
+将手机向左倾斜，x轴为正值。
+
+将手机向右倾斜，x轴为负值。
+
+将手机向上倾斜...        ","
+        Android手机传感器介绍            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:20,"
+Android之Handler用法总结
+
+
+方法一：(java习惯，在android平台开发时这样是不行的，因为它违背了单线程模型）
+
+刚刚开始接触android线程编程的时候，习惯好像java一样，试图用下面的代码解决问题   
+
+new Thread( new Runnable() {     
+
+    public void run() {     
+
+         my...        ","
+        Android之Handler用法总结            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:18,"
+Looper类说明
+
+ 　　Looper 类用来为一个线程跑一个消息循环。
+
+ 
+
+　　线程在默认情况下是没有消息循环与之关联的，Thread类在run()方法中的内容执行完之后就退出了，即线程做完自己的工作之后就结束了，没有循环的概念。
+
+ 
+
+　　调用Looper类的 prepare() 方法可以为当前线程创建一个消息循环，调用loop() 方法使之处理信息，直到循环结束。...        ","
+        Android OS--Looper、Thread、Handler            
+        "
+http://blog.csdn.net/peihaozhu/article/list/8,2015-11-29 16:17,"
+基本用法： 
+1)存数据： 
+//第一个参数是文件名，不需要加.xml后缀，如果文件不存在，系统会自动生成。 
+//文件路径为：/data/data//shared_prefs/xxx.xml 
+
+
+SharedPreferences sp = getSharedPreferences(""loginsetting"", MODE_PRIVATE);
+String name = sp.ge...        ","
+        SharedPreference用法            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-16 14:08,"
+Torrent小记由于某些众所周知的原因，我对torrent文件(也就是我们常说的种子文件)产生了浓厚的兴趣，这里是官方百科对torrent文件的定义：torrent文件本质上是文本文件，包含Tracker信息和文件信息两部分。Tracker信息主要是BT下载中需要用到的Tracker服务器的地址和针对Tracker服务器的设置，文件信息是根据对目标文件的计算生成的，计算结果根据BitTorrent...        ","
+        torrent文件编码            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:38,"
+在Python中，bytes和string是不同的东西。由一系列不可改变的Unicode字符组成的叫string。而一系列不可改变的介于0-255之间的数字被称为bytes对象。 unicode是一种编码标准，具体的实现标准可能是utf-8，utf-16，gbk ……python 在内部使用两个字节来存储一个unicode，使用unicode对象而不是str的好处，就是unicode方便于跨平台。U...        ","
+        Python中的str与bytes            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:37,"
+VC与WormHole的对比虚信道路由器通过引入虚信道技术，将一个物理信道分成逻辑上的多个虚信道。多个虚信道对物理信道分时复用，通过对虚信道的合理调度，当网络中发生数据分组阻塞时，阻塞的分组被缓存在某一条虚信道的缓存中，其它分组能够使用其它的虚信道继续进行传输。虚信道路由器是对基本虫孔路由器的改进，它解决了虫孔路由器的阻塞问题，能够提高物理信道的利用率，显著增加片上网络的性能。虚信道路由器需要为每条...        ","
+        虚信道路由            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:36,"
+matplotlib 是python最著名的绘图库，它提供了一整套和matlab相似的命令API，十分适合交互式地进行制图。而且也可以方便地将它作为绘图控件，嵌入GUI应用程序中。它的文档相当完备，并且 Gallery页面 中有上百幅缩略图，打开之后都有源程序。因此如果你需要绘制某种类型的图，只需要在这个页面中浏览/复制/粘贴一下，基本上都能搞定。在Linux下比较著名的数据图工具还有gnuplot...        ","
+        Matplotlib快速绘图（2）            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:35,"
+上图是一副常规的NoC Router结构图。FC指Flow Control流控机制，数据交换逻辑将开关分配单元仲裁结果进行链接，也就是将输入端口的FIFO与它请求的输出端口链接行程传输通道。FIFO，缓存，或者说当前的缓存主要使用的技术就是FIFO，first in first out的队列缓冲。魂村是片上网络路由器中必不可少的单元，用于存储数据。目前的路由器中缓存与交叉开关存在3中相对位置关系：...        ","
+        缓存与XY路由算法            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:34,"
+目前，网络中出现了一些不和谐因素，某些网站多次剽窃Hexo博友的原创文章。在对这些侵犯博友权益的网站提出谴责的同时，聪明的各位Geek们应该如何增强版权意识呢.最简单的办法就是在自己的部落格文章里添加水印，即使这些网站通过爬虫私自收录我们的文章，读者也能在文章中轻易的发现原作者。由于这种办法容易影响读者的阅读体验，我采用的是在每篇文章下面增加版权声明，将本篇文章的信息、初次刊登网站、作者信息追加进文...        ","
+        Hexo-文章版权追加            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:31,"
+模拟退火算法概述模拟退火算法来源于固体退火原理，将固体加温至充分高，再让其徐徐冷却，加温时，固体内部粒子随温升变为无序状，内能增大，而徐徐冷却时粒子渐趋有序，在每个温度都达到平衡态，最后在常温时达到基态，内能减为最小。根据Metropolis准则，粒子在温度T时趋于平衡的概率为e-ΔE/(kT)，其中E为温度T时的内能，ΔE为其改变量，k为Boltzmann常数。用固体退火模拟组合优化问题，将内能E...        ","
+        模拟退火            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:30,"
+NoC的拓扑结构就是指NoC中各个节点的连接方式。通常NoC拓扑结构分为两类，一类是直接型网络拓扑，另一类是间接性网络拓扑。直接型在直接网络中，节点处理器（IP）直接地通过网络彼此连接。常见的直接型拓扑包括网状拓扑（Mesh）、花式拓扑（Torus）等。 
+2D Mesh2D Mesh结构是一种最简单，最直观的拓扑结构，如图。每个节点连接一个资源和四个相邻的路由器，每个资源通过一个网络接口（Net-...        ","
+        Noc拓扑            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-25 15:10,"
+ini 文件是Initialization File的缩写，即初始化文件，是windows的系统配置文件所采用的存储格式，统管windows的各项配置，一般用户就用windows提供的各项图形化管理界面就可实现相同的配置了。但在某些情况，还是要直接编辑ini才方便，一般只有很熟悉windows才能去直接编辑。开始时用于WIN3X下面，WIN95用注册表代替，以及后面的内容表示一个节，相当于注册表中的...        ","
+        Java操作Ini文件            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-16 14:07,"
+前言之前写过一篇文章校园网上网认证,是讲我在校园里通过python实现子的那个上网登录，后来我在这个基础上增加了账号密码存储功能。到这里可能大家又会想到这是上一篇的延续，实际上并不是。在那篇文章里面，我在尝试了几种网络模块之后选择了Requests，它基于urllib3，隐式的在内部实现了很多特性。在Selenium模拟测试教务数据这篇文章中，我说过，尝试了很长时间，一直不能通过python网络模块...        ","
+        session教务数据            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-09 14:05,"
+数据流建模之前的介绍中，我们已经初步了解到数据流描述方式，本节对数据流的建模方式进一步讨论，主要讲述连续赋值语句、阻塞赋值语句、非阻塞赋值语句，并针对一个系统设计频率计数器的实例进行讲解。连续赋值语句数据流的描述是采用连续赋值语句(assign )语句来实现的。语法如下： 
+assign net_type = 表达式； 
+连续赋值语句用于组合逻辑的建模。 等式左边是wire 类型的变量。等式右边可以...        ","
+        Verilog小叙(三)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-09 14:04,"
+好的，接着上篇文章常量Verilog HDL中有三种常量： 
+整型、实型、字符串型。 
+下划线符号“_”可以随意用在整数或实数中，它们就数量本身没有意义。它们能用来提高易读性；唯一的限制是下划线符号不能用作为首字符。 
+下面主要介绍整型和字符串型。整型整型数可以按如下两种方式书写： 
+1. 简单的十进制数格式 
+2. 基数格式简单的十进制格式这种形式的整数定义为带有一个可选的“+”（一元）或“－”（...        ","
+        Verilog小叙(二)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-09 14:03,"
+前言当前业界的硬件描述语言中主要有VHDL 和Verilog HDL。根据当前ASIC/FPGA设计现有的特点、现状，Verilog HDL 语言已经成为决定的主导语言，使用Verilog HDL，可以统一ASIC/FPGA设计平台，简化流程。设计方法学数字电路设计方法当前的数字电路设计从层次上分可分成以下几个层次：
+算法级设计：利用高级语言如C语言及其他一些系统分析工具（如MATLAB）对设计从系...        ","
+        Verilog小叙(一)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-08 22:54,"
+前言Selenium是什么，看看Encyclopedia上的说明：Selenium是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE(7、8、9)、Mozilla Firefox、Mozilla Suite、Google Chrome等。这个工具的主要功能包括：测试与浏览器的兼容性——测试你的应用程序看是否能够很好得工作在不同浏...        ","
+        Selenium语法、解决frame问题以及速度分析            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-06 21:48,"
+提起map和reduce想必大家并不陌生，Google公司2003年提出了一个名为MapReduce的编程模型，用于处理大规模海量数据，并在之后广泛的应用于Google的各项应用中，2006年Apache的Hadoop项目正式将MapReduce纳入到项目中。好吧，闲话少说，今天要介绍的是Python函数式编程中的另外两个内建函数map()和reduce()，而不是Google的MapReduce。...        ","
+        Python中的map_reduce            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-06 21:46,"
+这几天晕晕乎乎的，什么都不想干，窝在房间里面看电影。可是呢，这些年已经把太多好评如潮的电影塞进脑子里，又不想一个个的翻豆瓣、烂番茄再看每个影人的电影评分，这时候呢，需求是我码代码的推动力:)爬虫试试呗获取演员ID豆瓣有个电影栏目，通过在里面的编辑框输入想要搜索的演员名，然后搜索就可以找到对应的影人。大多数搜索服务的连接都是通过get，因为搜索功能不牵扯到过多的私密信息，所以可以绕过搜索框直接在url...        ","
+        演员电影评分排序            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-02 12:01,"
+Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。其最初是为了 页面抓取 (更确切来说, 网络抓取 )所设计的， 也可以应用在获取API所返回的数据(例如 Amazon Associates Web Services ) 或者通用的网络爬虫。本文档将通过介绍Scrapy背后的概念使您对其工作原理有所了解， 并确定Sc...        ","
+        初窥Scrapy(Py3.x)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-01 11:28,"
+接着上一篇相关文章，还是说伯乐在线这个网站上有一个面向对象栏目。这次呢，不看妹子要求男生的身高问题，来瞧一瞧妹子在这个栏目上发帖子寻找soul mate的时间：）   实际上呢，网页信息是跟上次的一模一样，也就是说完全可以将上篇文章的网页代码保存在本地，设置好间隔符，通过不同的过滤规则获取相应的数据。下面是我的代码：  import requests
+import re
+import os
+impo...        ","
+        伯乐对象年龄爬虫            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-01 11:27,"
+最近在朋友的博客里看到了一篇文章，是讲伯乐在线这个网站上有一个面向对象栏目。什么是面向对象呢，面向对象是一个专门为IT单身男女服务的征友传播平台,由伯乐在线专门为程序员爱情创立的一个公益+免费活动。简单来说，网站的女用户在这个栏目组发帖子，包括自己的相关信息，以及理想的男友条件，男生们可以付出一定代价获得女用户保存在网站上的个人联系方式，看对眼的话，就去领证:)    然后呢，我这个朋友关注的点不太...        ","
+        伯乐身高爬虫            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-01 11:26,"
+pyquery库是jQuery的Python实现，可以用于解析HTML网页内容，使用方法：from pyquery import PyQuery as pq
+可加载一段HTML字符串，或一个HTML文件，或是一个url地址，例：
+d = pq(""hello"")
+d = pq(filename=path_to_html_file)
+d = pq(...        ","
+        pyquery小记            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:29,"
+如图是5端口虫孔路由器的结构，由5个输入端口、路由计算单元、开关分配单元、交叉开关和5个输出端口构成，其中4个端口与东、南、西、北4个方向的相邻路由器相连，剩下的是本地端口和IP核相连。虫孔路由器采用的是虫孔交换机制，同时使用缓存队列放置在输入端口的交换结构，输入缓存采用FIFO结构，缓存深度D表示输入缓存能够容纳的微片数目。工作过程虫孔路由器的工作工程如下，当头微片（head filt）到达路由器...        ","
+        虫孔Router            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-04-03 17:29,"
+Noc小记Noc是由Router和Channel组成的网络结构。其中router主要用来控制网络中数据传输，channel是连通片上系统中各处理核之间进行点对点数据传输的通路。NoC采用分组交换的方式进行通信，片上网络中各处理核之间通过发送请求和接收相应消息的方式通信。在网络中传输的消息由头（head）、传输数据和尾（tail）组成。投中包含接收方的地址信息，router根据这个地址建立从传输方到达...        ","
+        NoC路由器架构            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-03-25 10:42,"
+模块模块介绍
+模块是Verilog HDL语言的基本单元，数字系统是用模块的形式来描述。
+模块是描述某个设计的功能、结构和其他模块通信的外部端口。 Verilog HDL中的各个模块是并行运行的
+模块可以调用其他模块的实例   
+模块结构module ()
+    端口说明（input，output，inout）
+    参数定义（可选）
+    数据类型定义//wire、re...        ","
+        Verilog HDL笔记            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-03-22 15:06,"
+模块（module）是Verilog 的基本描述单位，用于描述某个设计的功能或结构及与其他模块通信的外部端口。模块在概念上可等同一个器件就如我们调用通用器件（与门、三态门等）或通用宏单元（计数器、ALU、CPU）等，因此，一个模块可在另一个模块中调用。一个电路设计可由多个模块组合而成，因此一个模块的设计只是一个系统设计中的某个层次设计，模块设计可采用多种建模方式。小程序加法器module addr(...        ","
+        Verilog入门实例            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-03-17 23:49,"
+Matplotlibmatplotlib 是python最著名的绘图库，它提供了一整套和matlab相似的命令API，十分适合交互式地行制图。而且也可以方便地将它作为绘图控件，嵌入GUI应用程序中。优势作为python上最有名气的绘图库:
+Matlab的语法 python语言
+latex的画图质量
+可以使用内嵌的latex引擎绘制的数学公式
+快速绘图matplotlib实际上是一套面向对象的绘图库，...        ","
+        Matplotlib快速绘图            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-03-17 23:45,"
+NumpyNumPy系统是Python的一种开源的数值计算扩展。这种工具可用来存储和处理大型矩阵，比Python自身的嵌套列表（nested list structure)结构要高效的多（该结构也可以用来表示矩阵（matrix））。据说NumPy将Python相当于变成一种免费的更强大的MatLab系统。NumPy（Numeric Python）提供了许多高级的数值编程工具，如：矩阵数据类型、矢量处...        ","
+        Python中的numpy            
+        "
+http://blog.csdn.net/peihaozhu/article/list/4,2016-03-16 14:09,"
+写在前面接着上篇文章，torrent文件编码.在torrent文件编码这篇文章的开始我就说过，种子文件对于青年男士有着巨大的诱惑力。我也不例外，由于国内文化教育方面抓的比较紧，所以某些领域的文件信息无法通过种子文件离线下载、进入高速通道。这个实现的原理很简单，直接通过扫描种子文件的tracker、服务器地址显然不可取，那就遍历torrent包含的文件名吧，这些文件往往会有很多露骨的字眼，净网行动进行...        ","
+        洗白BT文件            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-23 21:37,"
+最长递增子序列系列是DP动态规划中简单、经典的入门题目。类似最长非递减子序列、导弹拦截问题、最长公共子序列问题等等。这在我们逐渐了解、认知动态规划的过程中可以给我们提高很大的帮助。
+  
+  设有由n个不相同的整数组成的数列，记为:a[0]、a[1]、……、a[n-1]且a(i)<>a(j) (i<>j)
+例如{2,3,4,5,6,343,5,36,45,64,56,564}
+  若存在i1问题的引...        ","
+        DP介绍-最长递增子序列            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-22 23:38,"
+动态规划(dynamic programming)是运筹学的一个分支，是求解决策过程(decision process)最优化的数学方法。20世纪50年代初美国数学家R.E.Bellman等人在研究多阶段决策过程(multistep decision process)的优化问题时，提出了著名的最优化原理(principle of optimality)，把多阶段过程转化为一系列单阶段问题，利用各阶段...        ","
+        DP动态规划介绍            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-21 23:59,"
+最近好多朋友、同学陆陆续续开始了他们的毕设阶段，得益于国内蓬勃爆炸发展的移动终端产业，有相当一部分小伙伴们的课题都是基于android platform这个世界占比最大的开源移动操作系统app开发。他们也陆陆续续遇到了新的问题。恰好我曾经作为初学者遇到过相同的问题，我将这些问题记录下来，希望可以分享我的知识、经验与见解。Android SDK更新由于国内Google的IP受到GFW限制，所以无法通过...        ","
+        Android Sdk获取更新            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-21 23:58,"
+本篇文章是洗白种子文件的兄弟篇，也是为了安利一个宅男宅女极好的网站–汤不热.Tumblr（中文名：汤博乐）成立于2007年，是目前全球最大的轻博客网站，也是轻博客网站的始祖。Tumblr（汤博乐）是一种介于传统博客和微博之间的全新媒体形态，既注重表达，又注重社交，而且注重个性化设置，成为当前最受年轻人欢迎的社交网站之一。雅虎公司董事会2013年5月19日决定，以11亿美元收购Tumblr。tumbl...        ","
+        宅福利-Tumblr视频图片            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-20 12:46,"
+一个典型的使用ISE设计的数字系统一般包含以下步骤:
+工程的建立
+模块设计
+设计综合和查看综合结果 工程设计仿真
+分频器的设计
+用户约束的添加和设计是实现
+布局布线结果查看
+设计下载到FPGA芯片
+PROM文件的生成和下载到PROM中
+源文件类型如上图，在添加新的源文件时候，会根据我们目的的不同选择文件类型。这些文件类型从上往下依次是：
+块存储器映像文件
+在线逻辑分析仪Chipscope定义和连接文...        ","
+        ISE数字设计入门体验            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-20 12:44,"
+所谓综合，就是讲HDL语言、原理图等设计输入翻译成由与、或、非们和RAM、触发器登记本逻辑单元的逻辑连接（即网表）。并根据目标和要求（约束条件）优化生成的逻辑连接。ISE-XSTXST是Xilinx公司自己的综合（Synthsize）工具。当我们完成输入、仿真以及管脚分配之后就可以进行综合和实现。双击Synthesize-XST，就可以完成综合。一般而言，会有三种结果：
+仿真完成
+Warn警告
+ER...        ","
+        基于Xilinx的Synthesize            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-20 12:43,"
+过程块
+always过程块
+模板：always @()
+begin
+    //过程赋值
+    //if语句  
+    //case语句
+    //while、repeat、for语句
+    //task、function调用
+end当敏感信号表达式的值改变时候，就执行一遍块内语句。同时always过程块是不能够嵌套使用的。关键字posedge与negedge关键字分别是上...        ","
+        verilog过程块与赋值            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-20 12:41,"
+并行块在测试中经常会用到   fork...join块。使用并行块能表示以同一个时间起点算起的多个时间的运行，并行的执行复杂的过程结构，如循环或任务。egmodule inilne_tb;
+reg [7:0] data_bus;
+    initial fork
+        data_bus=8'b00;
+        #10 data_bus=8'h45;
+        //以下的两个re...        ","
+        Verilog-testbench笔记            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-20 12:40,"
+本文介绍在ISE开发环境下，由两个16bit加法器构成的、可以完成4个16bit输入的18bit输出加法器。IP核IP Core就是预先设计好、经过严格测试和优化过的电路功能模块，如乘法器、FIR滤波器、PCI接口等，并且一般采用参数可配置的结构，方便用户根据实际情况来调用这些模块。随着FPGA规模的增加，使用IP core完成设计成为发展趋势。IP Core生成器（Core Generator）是...        ","
+        ISE-testbench实例            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-20 12:39,"
+基础知识Test bench即Verilog需要编写的测试文件。在module设计完成、综合之后我们需要通过测试文件完成对设计module的测试。Test bench大致分为下面三个部分:
+时钟控制 clock control
+一般采用always实现
+实例化instantiate要测试的module
+对实例的输入赋值 
+ 
+与待测模块的接口:
+与输出端口相连接的变量定义为reg
+与输出端口相连的定...        ","
+        Verilog的testbench入门            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-20 12:38,"
+所谓实现（Implement）是将综合输出的逻辑网表翻译成所选器件的底层模块与硬件原语，将设计映射到器件结构上，进行布局布线，达到在选定器件上实现设计的目的。实现主要分为3个步骤：翻译（Translate）逻辑网表，映射（Map）到器件单元与布局布线（Place & Route）。翻译的主要作用是将综合输出的逻辑网表翻译为Xilinx特定器件的底层结构和硬件原语（具体的原语详见第3章中的原语介绍）。...        ","
+        基于ISE的设计实现基础            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-20 12:37,"
+在Verilog HDL 模型中，所有时延都用单位时间表述。使用`timescale 
+编译器指令将时间单位与实际时间相关联。该指令用于定义时延的单位和时延精度。`timescale编译器指令格式为：timescale time_unit / time_precision 
+ 
+- time_unit 单位时间
+time_precision  时间精度
+time_unit 和time_precisi...        ","
+        Verilog中的timescale            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-07 11:03,"
+介绍什么是Gulpgulp.js是一种基于流的，代码优于配置的新一代构建工具.官方文档Gulp和Grunt类似。但相比于 Grunt 的频繁的 I/O 操作，Gulp 的流操作，能更快地完成构建Gulp特性
+使用方便
+通过代码优于配置的策略，Gulp可以让简单的任务简单，复杂的任务更可管理。
+构建快速
+通过流式操作，减少频繁的 IO 操作，更快地构建项目。
+插件高质
+Gulp 有严格的插件指导策略，...        ","
+        Gulp介绍与Hexo优化            
+        "
+http://blog.csdn.net/peihaozhu/article/list/3,2016-04-07 11:01,"
+.gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利，以下是个人对于配置 .gitignore 的一些心得。配置语法
+以斜杠“/”开头表示目录；
+以星号“*”通配多个字符； 以问号“?”通配单个字符
+以方括号“[]”包含单个字符的匹配列表；
+以叹号“!”表示是跟踪（不忽略）某个文件或目录。；
+#此为注释 – 将被 Git 忽略
+[ ^abc]...        ","
+        gitignore忽略规则            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-02-27 14:22,"
+随着支付宝和微信转账支付的日益深入人心，有时候我们甚至可以在很多博客文章后面看到小编和文章作者自己添加的DIY打赏功能，包括微信、支付宝等扫描支付转账，本篇文章就是为hexo优化，在每篇文章后面添加打赏功能。打赏模块的代码layout\_partial 下新建 donate.ejs 输入如下内容：
+
+    <div...        ","
+        hexo博客打赏            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-02-27 14:20,"
+这次主要介绍一下如何使用Hexo自带的帮助函数在站点中添加文章目录。功能使用了Hexo提供的帮助函数，创建对应局部模块之前，首先要想想这块内容应该属于哪个布局？要添加到哪个局部模块下？考虑这些是为了整洁性，当你添加的东西越来越多的时候才不至于令自己混乱。文章目录文章目录肯定是添加到post布局上，这个毋庸置疑，因为只有看文章详情页的时候才需要目录。那么我们在目录layout/_partial/pos...        ","
+        hexo优化目录            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-03-01 11:25,"
+XPath即为XML路径语言，它是一种用来确定XML（标准通用标记语言的子集）文档中某部分位置的语言。XPath基于XML的树状结构，提供在数据结构树中找寻节点的能力。起初 XPath 的提出的初衷是将其作为一个通用的、介于XPointer与XSLT间的语法模型。但是 XPath 很快的被开发者采用来当作小型查询语言。简单说，xpath就是: 选择XML文件中节点的方法。所谓节点（node），就是X...        ","
+        xpath笔记            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-02-27 14:26,"
+FTP小序FTP（File Transfer Protocol），是文件传输协议的简称。用于Internet上的控制文件的双向传输。同时，它也是一个应用程序（Application）。用户可以通过它把自己的PC机与世界各地所有运行FTP协议的服务器相连，访问服务器上的大量程序和信息。概述
+文件传输是Internet提供的一项基本服务，通过Internet，可以把文件从一台计算机传送到另一台计算机，文...        ","
+        FTP            
+        "
+http://blog.csdn.net/peihaozhu/article/list/5,2016-02-27 14:25,"
+引言随着半导体工艺技术步入纳米阶段，在单一芯片中集成上亿晶体管已经成为现实，据itrs（international technology roadmap for semiconductors，国际半导体技术路线图）预测，到2010年，单个芯片上的晶体管数目将达到22亿个。如何有效地利用数目众多的晶体管是芯片体系结构必须回答的新问题。倘若因循单核的发展思路，芯片设计将面临互连延迟、存储带宽、功耗极限等...        ","
+        片上网络            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-02-27 14:17,"
+Python实现上网认证在学校的同行们应该都知道，目前国内大部分高校的上网采用网络认证系统，这可以简单化不同用户的权限管理，同时对于财务处理方面也有很大的优势。国内类似的系统，例如锐捷，我接触的比较多，通过简单的B/S网页账户登录认证实现上网。这几天，我就尝试使用了抓包工具以及Pyhton的模块做了一个简单的模拟一键登录、一键下线工具。    Pyhton中流行的相关模块urllib
+urlenco...        ","
+        校园网上网认证            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-02-05 10:42,"
+前些天在逛论坛的时候突然发现了一篇文章，标题是通过编程自动化提高自己博客访问量的。我想了下，突然感觉可以用学过的Python的简单知识来实现这一目的。主要原理就是BeautifulSoup+urllib的组合,通过BS解析网页，获取目录，然后深入，获取文章的url，通过urllib.request模块尝试连接CSDN的服务器。说干就干from bs4 import BeautifulSoupimpo...        ","
+        pyqt实现CSDN博客访客数编程自动化增加GUI            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-02-01 13:17,"
+关于二维码二维条码/二维码（2-dimensional bar code）是用某种特定的几何图形按一定规律在平面（二维方向上）分布的黑白相间的图形记录数据符号信息的；在代码编制上巧妙地利用构成计算机内部逻辑基础的“0”、“1”比特流的概念，使用若干个与二进制相对应的几何形体来表示文字数值信息，通过图象输入设备或光电扫描设备自动识读以实现信息自动处理：它具有条码技术的一些共性：每种码制有其特定的字符集...        ","
+        Python与二维码            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-01-26 23:06,"
+接着我的上篇文章，Python学习(一)这篇文章，到目前为止，学习到的知识都是和解释器自带的数据结构打交道，程序与外部的交互知识通过input、print函数，这篇文章以及以后的内容会更多在这些方面倾斜。文件素材open函数用来打开文件，语法如下：open(name[,mode[,buffering]])open函数使用一个文件名作为唯一的强制参数，然后返回一个文件对象。模式mode和缓冲buffe...        ","
+        Python学习(二)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-01-26 23:06,"
+python中的变量也是弱类型，无须使用保留字定义。想要使用的时候，可以直接对他赋值    str='this is a string var example'
+    #在python中使用  ‘#’代替其他编程语言中的 ‘//’然后就可以直接对他进行caozu9o，当然如果没有这一步骤，直接使用str会报错。 
+之后可以对str进行类型改变。    str=11;
+    print(str//...        ","
+        Python学习(一)            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-01-26 23:01,"
+BeautifulSoup抓取豆瓣电影信息 #Beautiful Soup 是用Python写的一个HTML/XML的解析器，它可以很好的处理不规范标记并生成剖析树(parse tree)。 它提供简单又常用的导航（navigating），搜索以及修改剖析树的操作。它可以大大节省你的编程时间。BeautifulSoup4的安装一、使用pip直接安装beautifulsoup4F:\demo>pip...        ","
+        Pyhton抓取豆瓣电影示例            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-01-26 23:00,"
+CGI小述CGI（Common Gateway Interface,通用网页接口）。CGI是网络服务器可以将查询（一般来说是通过Web表单）传递到专门的程序（比如Python等）中并且在网页上显示结果的标准机制。它是创建万维网应用程序而不用编写特殊用途的应用服务器的简单方法。  CGI(Common Gateway Interface) 是WWW技术中最重要的技术之一，有着不可替代的重要地位。CGI...        ","
+        Python CGI初体验            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-01-26 22:59,"
+Python的Lambda函数 #lambda函数也叫匿名函数，即，函数没有具体的名称。先来看一个最简单例子：def f(x):
+    return x**3print f(5)
+#结果是125Python中使用lambda的话，写成这样g = lambda x : x**3
+print g(5)
+#同样的结果  125lambda表达式在很多编程语言都有对应的实现。比如C#：var g = x...        ","
+        Lambda函数            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-01-26 22:56,"
+查看被删的微信好友原理就是新建群组,如果加不进来就是被删好友了(不要在群组里讲话,别人是看不见的)用的是微信网页版的接口查询结果可能会引起一些心理上的不适,请小心使用 :)还有些小问题:结果好像有疏漏一小部分,原因不明..最终会遗留下一个只有自己的群组,需要手工删一下没试过被拉黑的情况转自 https://github.com/0x5e/wechat-deleted-friends用法: 启动终端T...        ","
+        查看被删微信好友            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2016-01-26 22:54,"
+大家在使用谷歌或者百度搜索时，输入搜索内容时，谷歌总是能提供非常好的拼写检查，比如你输入 speling，谷歌会马上返回 spelling。 
+下面是用python代码实现的一个简易但是具备完整功能的拼写检查器:import re, collections
+def words(text): return re.findall('[a-z]+', text.lower()) 
+def train(fe...        ","
+        Python简单的拼写检查            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2015-12-23 22:11,"
+先说一下伪随机与真随机的区别:   真正意义上的随机数（或者随机事件）在某次产生过程中是按照实验过程中表现的分布概率随机产生的，其结果是不可预测的，是不可见的。而计算机中的随机函数是按照一定算法模拟产生的，其结果是确定的，是可见的。我们可以这样认为这个可预见的结果其出现的概率是100%。所以用计算机随机函数所产生的“随机数”并不随机，是伪随机数。当然了，在python中使用random模块的普通功能...        ","
+        伪随机性            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2015-12-23 21:58,"
+1.什么是正则表达式的贪婪与非贪婪匹配
+
+　　如：String str=""abcaxc"";
+
+　　　　Patter p=""ab*c"";
+
+　　贪婪匹配:正则表达式一般趋向于最大长度匹配，也就是所谓的贪婪匹配。如上面使用模式p匹配字符串str，结果就是匹配到：abcaxc(ab*c)。
+
+　　非贪婪匹配：就是匹配到结果就好，就少的匹配字符。如上面使用模式p匹配字符串str，结果就是匹...        ","
+        简单-正则表达式贪婪与非贪婪模式            
+        "
+http://blog.csdn.net/peihaozhu/article/list/6,2015-12-17 17:04,"
+JQuery提供了$.ajax、$.getJSON方法，在我们获取ins官方提供的图片获取链接之后，我们可以很轻易的通过解析json数据拿到图片的相关信息。
+获取ins提供的链接方法在此，当然由于最近instagram更换了部分代码，若想使用最新的获取方法，戳这里，当然你懂得，可能需要梯子辅助。
+拿到的链接类似如下: https://api.instagram.com/v1/users/{us...        ","
+        jquery获取instagram图片并添加fancybox效果            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2017-03-20 15:05,"
+最大似然与经验风险最小化
+  当模型是条件概率分布，损失函数是对数损失函数时，经验风险最小化就等价于极大似然估计
+首先给出对数形式的ERM的公式： 
+min1n∑i=1nL(yi,p(yi∣xi))\min \frac{1}{n}\sum\limits_{i=1}^n L(y_i,p(y_i\mid x_i))其中L(yi,f(xi))L(y_i,f(x_i))是损失函数，输出预测值为f(xi)f(...        ","
+        MAP、SRM、ERM与MLE            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2017-03-16 15:12,"
+拉格朗日乘子法拉格朗日乘子法（Lagrange multipliers）是一种寻找多元函数在一组约束下的极值的方法。通过引入拉格朗日乘子，可将有dd个变量与kk个约束条件的最优化问题转化为具有d+kd+k个变量的无约束优化问题求解基本的拉格朗日乘子法就是求函数f(x1,x2,...)f(x_1,x_2,...)在g(x1,x2,...)=0g(x_1,x_2,...)=0的约束条件下的极值的方法。主...        ","
+        ML优化拉格朗日与KKT            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-11-03 17:16,"
+介绍两种直接爬取知乎的方法，一种是通过CrawlSpider类，从Question页面开始，通过Rule自动填充带爬取页面；第二种是登录知乎首页之后，通过模拟js下拉页面发送ajax请求解析返回json数据填充原有的zhihu首页爬取。实际上还有另外一种，我们使用scrapy splash模块或者selenium工具模拟js操作，这种方法相比第二种方法更直接、简便，之后的文章会有介绍。在做这些之前，...        ","
+        Scrapy爬取知乎两种思路            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-11-03 15:48,"
+在Scrapy的FormRequest中直接将formdata设置为dict形式后，scrapy经过字节编码形式的转换，会发出一个非期望的request，例如：FormRequest(url=""**************************"",
+            meta = {'cookiejar' : response.meta['cookiejar']},...        ","
+        Scrapy解决formrequest中formdata为dict问题            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-11-03 15:47,"
+使用命令行scrapy crawl spider_name -o filename将制定内容的item信息输出时，scrapy使用默认的feed export对特定的file类型文件支持，例如json文件是JsonLinesItemExporter，xml文件是XmlItemExporter，有时候我们对export的形式或者内容不太满意时，可以自己继承上面的类，自定义export子类。默认显示的中...        ","
+        Scrapy中关于Export Unicode字符集问题解决            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-10-23 17:34,"
+pyinstaller打包使用pyqt5模块的时候，在win平台下，由于pyinstaller无法准确获取QT动态库文件路径，会报错导致无法打开运行程序，并提示错误信息pyinstaller failed to execute script pyi_rth_qt5plugins此时我们需要在打包的时候直接告诉pyinstaller到哪里去找，这个路径分隔符需要是unix形式：pyinstaller...        ","
+        pyinstaller打包pyqt5问题解决            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:52,"
+通过python的requests模块实现的一键登录、注销、查看校园网# -*- coding: utf-8 -*-
+import requests
+import resession=requests.session()headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, l...        ","
+        校园网一键登录注销            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:51,"
+使用selenium+python实现无人看守选课。用到的一些模块
+selenium
+selenium在前面的文章中曾经介绍过，就是模拟浏览器的一个第三方模块，通过提供的各种方法模拟控制browser，同时提供了无UI的Browserdriver，减少渲染开销，提升运行速度.
+time
+本例中实现暂停扫描功能，防止服务器对IP封锁
+re
+正则表达模块，获取相关数据 
+常用的方法
+b=webdrive...        ","
+        Selenium模拟选课            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:51,"
+字符串全排列规则最简单的思路就是使用递归实现：
+将最左边字符固定，后面的依次全排
+上一步的依次安排实际上是一次小集合的字符串全排 将次左边字符固定，剩下的全排
+将此次左边固定…
+直到最后一个数
+第一轮结束，将原始字符串的最左边字符与次左边字符交换位置
+按照上面的顺序依次进行
+将原始字符串从左数第3位固定到最左边
+依次进行
+…直到左右进行完毕输出
+实例举例来讲：原是字符串为’abc’
+a固定，剩下两个...        ","
+        string全排列            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:50,"
+input
+raw_input()
+在py2版本中，raw_input接收输入流并直接转换存储为string类型
+input()
+py2版本中，通过根据输入类型不同存储为不同格式。比如像输入string，需在内容外包裹单引或者双引py3整合input与raw_input，将所有输入作为string保存printpy2中print不是将print作为一个方法函数，二十当做语句使用，调用时不能再后面直接...        ","
+        py2-3            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:48,"
+OnTouchListener
+getRawX()和getRawY()
+获得的是相对屏幕的位置
+getX()和getY()
+获得的永远是view的触摸位置坐标（这两个值不会超过view的长度和宽度）。View
+view.getTranslationX()
+计算的该view的偏移量。初始值为0，向左偏移值为负，向右偏移值为正。
+view.getX()
+相当于该view左上角距离父容器左边缘的距离，等于...        ","
+        android中的获取坐标            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:48,"
+get&set版本号set在传统的Eclipse IDE开发中，我们通常只需要在清单文件manifests中写入相应代码即可搞定。<manifest xmlns:android=""http://schemas.android.com/apk/res/android""
+    package=""your package name""
+    android:versionCode=""1""
+    and...        ","
+        Application版本更新            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:48,"
+ngrok 是一个反向代理，通过在公共的端点和本地运行的 Web 服务器之间建立一个安全的通道。ngrok 可捕获和分析所有通道上的流量，便于后期分析和重放
+为了方便本地服务器简单映射到外网访问，我们可以使用Ngroke服务。只需要几条简单的命令即可使用。
+国内ngrok服务
+点击进入获取相应平台的最新版本
+注册/登录 添加隧道列表
+将本地服务器地址、端口号与Ngroke分配的服务器绑定。本地地址：...        ","
+        Ngroke            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:47,"
+文章大部分内容参考自CSDN–飘过的小牛
+  
+  AC自动机，全程是Aho-Corasick automaton，该算法在1975年产生于贝尔实验室，是著名的多模匹配算法。
+要讲清楚比较吃力，直接上实例边消化边理解会好很多。示例构造
+构造一棵Trie，作为AC自动机的搜索数据结构。
+构造fail指针，使当前字符失配时跳转到具有最长公共前后缀的字符继续匹配。如同 KMP算法一样， AC自动机在匹配时...        ","
+        AC自动机            
+        "
+http://blog.csdn.net/peihaozhu/article/list/1,2016-09-19 18:46,"
+文章大部分内容引用自Encyclopedia
+  
+  Trie树，即字典树。是一种树形结构，哈希树的变种。典型应用是用于统计，排序和保存大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。
+Trie树可以用来作为搜索引擎中的分词处理手段。描述根节点不包含字符，除根节点外每一个节...        ","
+        Trie树            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-12-16 10:59,"
+Jquery中关于Ajax编程的一些方法:
+  load()方法
+ $.get()方法
+  $.post()方法
+  $.getJSON()方法
+  $.ajax()方法
+
+
+
+调用load()方法可以动态地从服务器加载数据，并填充调用它的HTML元素的内容，语法如下：
+#(选择器).load(url[, data ] [, complete(responseText,text...        ","
+        在JQuery中实现Ajax编程            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-12-15 16:13,"
+jQuery可以很方便地使用Event对象对触发的元素的事件进行处理，jQuery支持的事件包括键盘事件、鼠标事件、表单事件、文档加载事件和浏览器事件等】
+1)事件处理函数
+指定事件处理函数
+
+jQuery选择器. 事件名(function() {
+  
+  ……
+} );
+
+
+例如，前面多次使用的$(document).ready()方法指定文档对象的ready事件处理函数。rea...        ","
+        JS事件处理            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-12-15 15:07,"
+jQuery插件是基于jQuery开发的js脚本库，是对jQuery的有效扩展。正因为有很多人把自己的开发成果以插件的形式共享，所以jQuery就好像一个取之不竭的宝藏。只要你用心寻找，总会找到需要的插件。也许有时候你正准备自己编码实现一个功能，却意外地发现有人已经把它做成插件共享，你只需下载并引用插件就可以了。
+JQuery插件可以分为以下三种类型：
+
+（1）封装jQuery对象方法：把一...        ","
+        JQuery插件定义            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-12-14 16:49,"
+1. 正则表达式规则
+1.1
+普通字符
+    字母、数字、汉字、下划线、以及后边章节中没有特殊定义的标点符号，都是""普通字符""。表达式中的普通字符，在匹配一个字符串的时候，匹配与之相同的一个字符。
+
+    举例1：表达式 ""c""，在匹配字符串""abcde""
+时，匹配结果是：成功；匹配到的内容是：""c""；匹配到的位置是：开始于2，结束于3。（注：下标从0开始还是从1开始，因当前编程语...        ","
+        正则表达式语法            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-12-05 17:17,"
+C++的精髓——虚函数　　简单地说，那些被virtual关键字修饰的成员函数，就是虚函数。虚函数的作用，用专业术语来解释就是实现多态性（Polymorphism），多态性是将接口与实现进行分离；用形象的语言来解释就是实现以共同的方法，但因个体差异，而采用不同的策略.多态有个关键之处就是一切用指向基类的指针或引用来操作对象,指向基类的指针在操作它的多态类对象时，会根据不同的类对象，调用其相应的函数，这...        ","
+        C++虚函数            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-12-01 21:11,"
+零零散散的学了JS好久，两年前就有接触，却一直拖到了现在，才有一整块的时间去学习巩固.	练手：使用JS内置对象Cookie保存至本地实现...        ","
+        JavaScript初体验--Cookie            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-30 11:42,"
+The gray code is a binary numeral system where two successive values differ in only one bit.
+
+Given a non-negative integer n representing the total number of bits in the code, print the sequence of ...        ","
+        Gray Code（Leetcode 89）            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-30 10:20,"
+RunStone
+
+an
+ android application for record your run data
+
+App主要分为两种模式，分别为indoor室内，与outdoor室外模式.
+室内模式通过Google提供的Sample尝试使用加速度传感器模拟人体走路数据，来记录使用者在室内或者室外的步数信息,
+
+当然你可以根据自己的自身条件自行设置步长,行走方式，以及手机传感器对信...        ","
+        跑步App（室内+室外+分享功能）            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-30 10:09,"
+最近对它的README.md文件颇为感兴趣。便写下这贴，帮助更多的还不会编写README文件的同学们。
+
+README文件后缀名为md。md是markdown的缩写，markdown是一种编辑博客的语言。用惯了可视化的博客编辑器（比如CSDN博客，囧），这种编程式的博客编辑方案着实让人眼前一亮。不过GitHub支持的语法在标准markdown语法的基础上做了修改，称为Github Flavor...        ","
+        Github添加README.md教程            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-29 22:32,"
+Java O(1)space using Binary-Search
+public int findDuplicate(int[] nums) {
+    int low = 1, high = nums.length - 1;
+    while (low <= high) {
+        int mid = (int) (low + (high - low) * 0.5);
+      ...        ","
+        Find the Duplicate Number（Leetcode 287）            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-29 16:55,"
+Android activity的生命周期
+
+
+
+activity类处于android.app包中，继承体系如下：
+1.java.lang.Object
+2.android.content.Context
+3.android.app.ApplicationContext
+4.android.app.Activity
+activity是单独的，用于处理用户操作。几乎所有的activ...        ","
+        Android开发之Activity生命周期            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-29 16:43,"
+哈希树
+
+       在各种介绍里的都比较抽象，其实没有那么难，这里进行一个最简单的说明。
+
+
+
+
+
+
+       在将一个数进行哈希的时候，我曾经写过关于哈希的这么些东西：对于数，当一个质数不够用的时候，可以加上第二个质数，用两个mod来确定该数据在库中的位置。那么这里需要简单的解释一下，对于一个质数x，它的mod有[ 0 .. x - 1 ] x种；所以对于两个质数x和y...        ","
+        字典树            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-29 16:38,"
+set集合容器：实现了红黑树的平衡二叉检索树的数据结构，插入元素时，它会自动调整二叉树的排列，把元素放到适当的位置，以保证每个子树根节点键值大于左子树所有节点的键值，小于右子树所有节点的键值；另外，还得保证根节点左子树的高度与右子树高度相等。
+平衡二叉检索树使用中序遍历算法，检索效率高于vector、deque和list等容器，另外使用中序遍历可将键值按照从小到大遍历出来。
+构造set集合主要...        ","
+        C++底层数据结构常用方法            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-29 16:37,"
+C++ STL 的实现：
+
+1.vector      底层数据结构为数组 ，支持快速随机访问
+
+2.list            底层数据结构为双向链表，支持快速增删
+
+3.deque       底层数据结构为一个中央控制器和多个缓冲区，详细见STL源码剖析P146，支持首尾（中间不能）快速增删，也支持随机访问
+
+
+deque是一个双端队列(double-ended que...        ","
+        C++底层数据结构实现            
+        "
+http://blog.csdn.net/peihaozhu/article/list/7,2015-11-29 16:36,"
+1、src目录是源代码目录，所有允许用户修改的java文件和用户自己添加的java文件都保存在这个目录中
+
+ 
+
+2、gen目录是1.5版本新增的目录，用来保存ADT自动生成的java文件，例如R.java或AIDL文件
+
+ 
+
+注意：R．java文件（非常重要）
+
+a)        R.java文件是ADT自动生成的文件，包含对drawable、layout和values目...        ","
+        Android项目文件构成（Eclipse示例）            
+        "
