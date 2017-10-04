@@ -13,33 +13,41 @@ class MtuSpider(scrapy.Spider):
     def parse(self, response):
         
         pages = response.xpath('//*[@class="all"]//ul//li//p[@class="url"]/a')
-        # items = []
-        item = MziItem()
+        items = []
+        
         for page in pages:                        
-
-            item['fileName'] = page.xpath('./text()').extract()[0]
+            item = MziItem()
+            # item['fileName'] = page.xpath('./text()').extract()[0]
             item['siteURL'] = page.xpath('./@href').extract()[0]
+            item['fileName'] = item['siteURL'].split('/')[-1]
 
-            # items.append(item)
+            items.append(item)
             # yield item
             # item['siteURL'] = 'http://www.mzitu.com/104369'
+
+        for item in items:
             yield Request(url=item['siteURL'],callback=self.parse_one,meta={'item1':item})
 
 
     def parse_one(self,response):
         # pass
         item2 = response.meta['item1']
-        source = requests.get(response.url)
-        html = source.text.encode('utf-8')
+        # source = requests.get(response.url)
+        # html = source.text.encode('utf-8')
 
         num = response.xpath('//div[@class="pagenavi"]/a/span/text()').extract()[-2]
+        pageURL = response.url
         items = []
+        print 'num is :--->' + num
+        print 'pageURL:--->' + pageURL
+        print 'filename :--->' +item2['fileName']
 
         for i in range(1,int(num)+1):
             item = MziItem()
             item['fileName'] = item2['fileName']
+            # item['path'] = response.url.split('/')[-1]
             item['path'] = item['fileName'] + '/'+ str(i) + '.jpg'
-            item['pageURL'] = response.url + '/' + str(i)
+            item['pageURL'] = pageURL + '/' + str(i)
             items.append(item)
 
         for item in items:
@@ -51,9 +59,10 @@ class MtuSpider(scrapy.Spider):
         item3 = response.meta['item2']
 
         URL = response.xpath('//div[@class="main-image"]//img/@src').extract()[0]
-        item['detailURL'] = URL
+        item['image_urls'] = URL
         item['path'] = item3['path']
         item['fileName'] = item3['fileName']
+        print 'result is :-->' + item['image_urls'],item['path'],item['fileName']
 
         yield item
 

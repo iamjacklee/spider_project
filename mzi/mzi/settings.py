@@ -14,7 +14,7 @@ BOT_NAME = 'mzi'
 SPIDER_MODULES = ['mzi.spiders']
 NEWSPIDER_MODULE = 'mzi.spiders'
 
-
+IMAGES_STORE = 'images'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'mzi (+http://www.yourdomain.com)'
 
@@ -27,11 +27,11 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1
+# DOWNLOAD_DELAY = 1
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
-CONCURRENT_REQUESTS_PER_IP = 16
-
+# CONCURRENT_REQUESTS_PER_IP = 16
+# 
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = False
 
@@ -39,16 +39,20 @@ COOKIES_ENABLED = False
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
+# DEFAULT_REQUEST_HEADERS = {
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
-#}
+# }
+# DEFAULT_REQUEST_HEADERS = {
+#     'Referer': 'http://www.mzitu.com/1/3'
+# }
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'mzi.middlewares.MziSpiderMiddleware': 543,
-#}
+SPIDER_MIDDLEWARES = {
+   # 'mzi.middlewares.MziSpiderMiddleware': 543,
+'scrapy.contrib.spidermiddleware.referer.RefererMiddleware': True,
+}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
@@ -66,7 +70,8 @@ RANDOM_UA_TYPE = 'random'
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'mzi.pipelines.MziPipeline': 300,
+   'mzi.pipelines.MyImagesPipeline': 300,
+   # 'mzi.pipelines.MziPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

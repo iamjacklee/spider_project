@@ -14,4 +14,4 @@ class RandomUserAgentMiddleware(object):
         def get_ua():
             return getattr(self.ua,self.ua_type)
         request.headers.setdefault("User-Agent",get_ua())
-        request.headers.setdefault('Referer','http://www.mzitu.com/all')
+        request.headers.setdefault("Referer",'http://www.mzitu.com/1/3')
