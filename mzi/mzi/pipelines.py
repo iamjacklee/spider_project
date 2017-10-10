@@ -54,7 +54,6 @@ class MyImagesPipeline(ImagesPipeline):
         # print 'foderName is :--->' + folder
         # if not os.path.exists(folder):
         #     os.makedirs(folder)
-        if name.split('/')[-1] == '1':
-            print 'path is ---=================================================== 1'
+        
         filename = u'{0}'.format(name)
         return filename 

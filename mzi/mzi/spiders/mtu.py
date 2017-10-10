@@ -12,7 +12,7 @@ class MtuSpider(scrapy.Spider):
 
     def parse(self, response):
         
-        pages = response.xpath('//*[@class="all"]//ul//li//p[@class="url"]/a')[:1]
+        pages = response.xpath('//*[@class="all"]//ul//li//p[@class="url"]/a')
         # pages = ['http://www.mzitu.com/104557']
         items = []
         
@@ -39,9 +39,9 @@ class MtuSpider(scrapy.Spider):
         num = response.xpath('//div[@class="pagenavi"]/a/span/text()').extract()[-2]
         pageURL = response.url
         items = []
-        print 'num is :--->' + num
-        print 'pageURL:--->' + pageURL
-        print 'filename :--->' +item2['fileName']
+        # print 'num is :--->' + num
+        # print 'pageURL:--->' + pageURL
+        # print 'filename :--->' +item2['fileName']
 
         for i in range(1,int(num)+1):
             item = MziItem()
@@ -88,7 +88,7 @@ class MtuSpider(scrapy.Spider):
         item['image_urls'] = URL
         item['path'] = item3['path']
         item['fileName'] = item3['fileName']
-        print 'result is :-->' + item['image_urls'],item['path'],item['fileName']
+        # print 'result is :-->' + item['image_urls'],item['path'],item['fileName']
 
         yield item
 
