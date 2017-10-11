@@ -70,6 +70,7 @@ RANDOM_UA_TYPE = 'random'
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+   'mzi.pipelines.MziPipeline': 200,
    'mzi.pipelines.MyImagesPipeline': 300,
    # 'mzi.pipelines.MziPipeline': 300,
 }
@@ -95,3 +96,8 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 # REDIRECT_ENABLED = False
+
+MONGODB_HOST = '127.0.0.1'
+MONGODB_PORT = 27017
+MONGODB_DBNAME = 'mydb'
+MONGODB_DOCNAME = 'mzitu'

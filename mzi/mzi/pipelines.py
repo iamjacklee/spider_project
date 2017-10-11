@@ -11,24 +11,28 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 import scrapy
 from scrapy.pipelines.images import ImagesPipeline
+import pymongo
+# from mzi.settings import settings
+from scrapy.conf import settings
 
 
-# class MziPipeline(object):
-#     def process_item(self, item, spider):
-#         # return item
-#         detailURL = item['detailURL']
-#         path = item['path']
-#         fileName = item['fileName']
+class MziPipeline(object):
 
-#         if not os.path.exists(fileName):
-#             os.makedirs(fileName)
+    def __init__(self):
+        host = settings['MONGODB_HOST']
+        port = settings['MONGODB_PORT']
+        dbName = settings['MONGODB_DBNAME']
+        col = settings['MONGODB_DOCNAME']
+        client = pymongo.MongoClient(host=host,port=port)
+        tdb = client[dbName]        
+        self.post = tdb[col]
 
-#         image = requests.get(detailURL)
-#         f = open(path,'wb')
-#         f.write(image.content)
-#         f.close()
+    def process_item(self, item, spider):
+        # return item
+        article = dict(item)
+        self.post.insert(article)
 
-#         return item
+        return item
 
 
 
