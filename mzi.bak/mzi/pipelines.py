@@ -38,43 +38,19 @@ class MziPipeline(object):
 
 class MyImagesPipeline(ImagesPipeline):
 
-    # def __init__(self):
-    #     host = settings['MONGODB_HOST']
-    #     port = settings['MONGODB_PORT']
-    #     dbName = settings['MONGODB_DBNAME']
-    #     col = settings['MONGODB_DOCNAME']
-    #     client = pymongo.MongoClient(host=host,port=port)
-    #     tdb = client[dbName]        
-    #     self.post = tdb[col]
-
     def get_media_requests(self, item, info):
-        # for image_url in item['image_urls']:
-        #     yield scrapy.Request(image_url, meta={'item': item},headers={'Referer':image_url})
+        for image_url in item['image_urls']:
+            yield scrapy.Request(image_url, meta={'item': item},headers={'Referer':image_url})
         
 
-        image_url = item['image_urls']
-        yield scrapy.Request(image_url, meta={'item': item},headers={'Referer':image_url})
+        # image_url = item['image_urls']
+        # yield scrapy.Request(image_url, meta={'item': item},headers={'Referer':image_url})
 
     def item_completed(self, results, item, info):
-        host = settings['MONGODB_HOST']
-        port = settings['MONGODB_PORT']
-        dbName = settings['MONGODB_DBNAME']
-        col = settings['MONGODB_DOCNAME']
-        client = pymongo.MongoClient(host=host,port=port)
-        tdb = client[dbName]        
-        post = tdb[col]
-
         image_paths = [x['path'] for ok, x in results if ok]
         if not image_paths:
             raise DropItem("Item contains no images")
-        else:
-            # sql = '{pageURL:"'+ item['pageURL'] +'"},{"$set":{"isdown":"1"}},upsert=False'
-            sql = '{"pageURL":"'+ item['pageURL'] +'"},{"$set":{"isdown":"1"}},upsert=False'
-            # post.update_one(sql)
-            # post.update({pageURL:item['pageURL']},{$set:{isdown:"1"}})
-        print 'item is ===============' + sql
-
-        # update_one({'_id': p['_id']},{'$set': {'d.a': existing + 1}}, upsert=False)
+        # else:
 
         return item
 

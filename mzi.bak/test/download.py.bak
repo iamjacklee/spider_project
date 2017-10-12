@@ -1,0 +1,169 @@
+import sqlite3
+import requests
+from bs4 import BeautifulSoup
+import os
+import random
+import time
+
+class download():
+    def __init__(self):
+        # self.user_agent_list = ["Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1"]
+
+        # self.headers = {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"} 
+        
+        # self.headers = {
+        #     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        #     "Accept-Encoding":"gzip, deflate",
+        #     "Accept-Language":"zh-CN,zh;q=0.8",
+        #     "Cache-Control":"max-age=0",
+        #     "Host":"www.mzitu.com",            
+        #     "Proxy-Connection":"keep-alive",
+        #     "Upgrade-Insecure-Requests":"1",
+        #     "User-Agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36",
+        #     "If-Modified-Since":"Sat, 05 Aug 2017 :11:59 GMT"
+
+        # }
+        # self.headers = {                
+        #         "Host": "www.mzitu.com",
+        #         "Proxy-Connection": "keep-alive",
+        #         "Upgrade-Insecure-Requests": "1",
+        #         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36",
+        #         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        #         "Referer": "http://www.mzitu.com/1/3",
+        #         "Accept-Encoding": "gzip, deflate",
+        #         "Accept-Language": "zh-CN,zh;q=0.8",
+        #         "Cookie": "Hm_lvt_dbc355aef238b6c32b43eacbbf161c3c=1501686261,1501842451,1501849821,1501919031; Hm_lpvt_dbc355aef238b6c32b43eacbbf161c3c=1501932178"
+
+        #     }
+
+        self.headers = {"User-Agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36",
+                    
+                    "Referer": "http://www.mzitu.com/1/3",
+
+                }
+
+
+
+
+               
+        self.picpath = 'd:\python\kk\ull'
+        if not os.path.exists(self.picpath):
+            os.makedirs(self.picpath)
+
+    # def getheaders(self):
+    #     # UA = random.choice(self.user_agent_list) 
+    #     UA = self.user_agent_list
+    #     self.headers = {'User-Agent': UA} 
+
+
+    def getconn(self):
+        self.conn = sqlite3.connect('mzi.db')
+        self.cur = self.conn.cursor()
+
+    def closeconn(self):
+        self.cur.close()
+        self.conn.close()
+
+    def create_folder(self):
+        self.getconn()
+        sql = 'select hpath from allurl'
+        self.cur.execute(sql)
+        pathname_lis = self.cur.fetchall()
+        for pathname in pathname_lis:
+            # print pathname[0]
+            deta_path =os.path.join(self.picpath,pathname[0])
+            # print deta_path
+            os.makedirs(deta_path)
+        self.closeconn()
+
+    def downimg(self):
+        self.getconn()
+        sql = 'select hpath,durl from detail order by hpath,hurl'
+        self.cur.execute(sql)
+        imgurl_lis = self.cur.fetchall()
+
+        num = 1
+        for imgurl in imgurl_lis:
+            # print imgurl[1]
+            first_url = imgurl[1]
+            fpath = imgurl[0]
+            jpgname = first_url.split('/')[-1]
+            # print first_url,fpath,jpgname
+            curr_path = os.path.join(self.picpath,fpath)
+            # curr_path = 'd:\python\kk'
+            # print curr_path
+            if not os.path.exists(curr_path):
+                os.makedirs(curr_path)
+
+            os.chdir(curr_path)
+            # print os.getcwd()0
+
+
+            # self.getheaders()
+            IP = '180.175.249.189:9000'
+            # num =num +1
+            # if int(num) % 20 == 0:
+            #    IP = '171.104.132.203:9999'
+
+            # if int(num) % 40 == 0:
+            #    IP = '219.141.189.236:3128'
+
+
+            
+            proxy = {'http': IP}
+            # print first_url
+            # print 'start'
+            # testurl = 'http://www.mzitu.com/1/2'
+            # img_html = requests.get(testurl,headers=self.headers,proxies=proxy,timeout =3)
+            img_html = requests.get(first_url,headers=self.headers,proxies=proxy,timeout =6)
+            # img_html = requests.get(first_url,headers=self.headers,timeout =3)
+
+            # print img_html.url
+            # print img_html.history
+
+
+            # cc = open('t1.txt','a')
+            # ff = img_html.text.encode('utf-8')
+
+            # cc.write(ff)
+            # cc.close()
+            # print 'end'
+
+
+
+
+            img_Soup = BeautifulSoup(img_html.text,'html.parser')
+            img_url = img_Soup.find('div',class_='main-image').find('img')['src']
+
+            # self.getheaders()
+            img = requests.get(img_url,headers=self.headers)
+            
+            f = open(jpgname + '.jpg','ab')
+            f.write(img.content)
+            f.close()
+            
+
+            # bb = open('t1.txt','a')
+            # bb.write(img_url+'\n')
+            # bb.close()
+            # print 'write success  123'
+
+            
+                # break
+
+            # time.sleep(3)
+
+            print os.getcwd(),jpgname,'success download!',num,int(num) % 40
+
+        
+
+
+
+        self.closeconn()
+
+
+down = download()
+# down.create_folder()
+down.downimg()
+
+

@@ -88,7 +88,6 @@ class MtuSpider(scrapy.Spider):
         item['image_urls'] = URL
         item['path'] = item3['path']
         item['fileName'] = item3['fileName']
-        item['pageURL'] = item3['pageURL']
         # print 'result is :-->' + item['image_urls'],item['path'],item['fileName']
 
         yield item
