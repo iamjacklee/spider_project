@@ -69,10 +69,10 @@ class MyImagesPipeline(ImagesPipeline):
             raise DropItem("Item contains no images")
         else:
             # sql = '{pageURL:"'+ item['pageURL'] +'"},{"$set":{"isdown":"1"}},upsert=False'
-            sql = '{"pageURL":"'+ item['pageURL'] +'"},{"$set":{"isdown":"1"}},upsert=False'
-            # post.update_one(sql)
-            # post.update({pageURL:item['pageURL']},{$set:{isdown:"1"}})
-        print 'item is ===============' + sql
+            # sql = '{"pageURL":"%s"},{"$set":{"isdown":"1"}}' % (item['pageURL'])
+            # post.update(sql)
+            post.update({"pageURL":item['pageURL']},{"$set":{"isdown":"1"}})
+        # print 'item is ===============' + sql
 
         # update_one({'_id': p['_id']},{'$set': {'d.a': existing + 1}}, upsert=False)
 

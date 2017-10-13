@@ -10,8 +10,8 @@ class MzituAllSpider(scrapy.Spider):
 
     def parse(self, response):
         # pass
-        # pages = response.xpath('//*[@class="all"]//ul//li//p[@class="url"]/a')
-        pages = response.xpath('//*[@class="all"]//ul//li//p[@class="url"]/a')[:1]
+        pages = response.xpath('//*[@class="all"]//ul//li//p[@class="url"]/a')
+        # pages = response.xpath('//*[@class="all"]//ul//li//p[@class="url"]/a')[:1]
         # pages = ['http://www.mzitu.com/104557']
         items = []
         
