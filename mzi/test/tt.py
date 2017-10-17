@@ -15,3 +15,5 @@ document = {'tkey':'000','tvalue':'May'}
 # post.update({key},{})
 tname = 'killer'
 post.update({"tkey":'000'}, {'$set':{"tvalue":tname}})
+
+
