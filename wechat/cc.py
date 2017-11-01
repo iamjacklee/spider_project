@@ -10,11 +10,14 @@ bot = Bot(console_qr=True, cache_path=True)
 
 @bot.register()
 def print_others(msg):
-    print(msg)
+    # print(msg.text)
     # msg.reply('hello boy!!!')
-    if msg == 'hi':
+    
+    
+    if msg.text == 'hi':
         msg.reply('hi ,i am jack')
     else:
         msg.reply('hi ,i am hugo')
+    
 
 embed()
